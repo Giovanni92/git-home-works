@@ -1,0 +1,124 @@
+.first,
+.second,
+.third,
+.fourth{
+    display: flex;
+}
+
+.first,
+.third,
+.fourth{
+    flex-wrap: wrap;
+}
+
+.third .colored:first-child,
+.fourth .colored:first-child{
+    flex: 0 0 100%;    
+}
+
+.first .colored,
+.second .colored,
+.third .colored,
+.fourth .colored{
+    flex: 0 0 50%;
+}
+
+@media (min-width:320px){
+    .fourth{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .fourth .colored:first-child{
+        flex: 0 0 50%;
+    }
+    .fourth .colored{
+        flex: 0 0 50%;
+    }
+    .fourth .colored:last-child{
+        flex: 0 0 100%;
+    }
+
+    .fifth.fifth{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .fifth .colored{
+        flex: 0 0 100%;
+    } 
+    .fifth .colored:first-child{
+        flex: 0 0 50%;
+    }
+    .fifth .colored:nth-child(2){
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width:768px){
+    .third .colored,
+    .third .colored:first-child{
+        flex: 0 0 33.333%;
+    }
+    .fourth .colored:first-child,
+    .fourth .colored:last-child{
+        flex: 0 0 35%;
+    }
+    .fourth .colored:nth-child(2){
+        flex: 0 0 30%;
+    }
+    .fifth .colored:nth-child(3),
+    .fifth .colored:nth-child(4){
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width:960px){
+    .third .colored:first-child,
+    .third .colored:nth-child(2){
+        flex: 0 0 50%;
+    }
+    .third .colored:last-child{
+        flex: 0 0 100%;
+    }
+    .fifth{
+        justify-content: center;
+    }
+    
+    .fifth .colored:first-child,
+    .fifth .colored:nth-child(2),
+    .fifth .colored:nth-child(3),
+    .fifth .colored:nth-child(4),
+    .fifth .colored{
+        flex: 0 0 33%;
+    }
+}
+
+@media (min-width:1200px){
+    .first {
+        flex-wrap: nowrap;
+    }
+    .first .colored{
+        flex: 0 0 25%;
+    }
+
+    .third .colored:first-child,
+    .third .colored:nth-child(2),
+    .third .colored:last-child{
+        flex: 0 0 25%;
+    }
+
+    .fourth .colored:first-child,
+    .fourth .colored:nth-child(2){
+        flex: 0 0 25%;
+    }
+    .fourth .colored:last-child{
+        flex: 0 0 50%;
+    }
+
+    .fifth .colored:first-child,
+    .fifth .colored:nth-child(2),
+    .fifth .colored:nth-child(3),
+    .fifth .colored:nth-child(4),
+    .fifth .colored{
+        flex: 0 0 20%;
+    }
+}
